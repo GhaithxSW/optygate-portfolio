@@ -270,7 +270,7 @@ export function ProjectDetail({ project }: ProjectDetailProps) {
                   Want a similar solution?
                 </h3>
                 <p className="text-silver text-xs md:text-sm mb-3 md:mb-4">
-                  Let's discuss how we can help transform your business.
+                  Let&apos;s discuss how we can help transform your business.
                 </p>
                 <a
                   href="mailto:info@optygate.com"

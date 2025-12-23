@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Filter, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeading } from "@/components/shared/SectionHeading";
@@ -27,10 +27,10 @@ export function ProjectsGrid() {
     startIndex + PROJECTS_PER_PAGE
   );
 
-  // Reset to page 1 when filter changes
-  useEffect(() => {
+  const handleIndustryChange = (industry: string) => {
+    setSelectedIndustry(industry);
     setCurrentPage(1);
-  }, [selectedIndustry]);
+  };
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -80,7 +80,7 @@ export function ProjectsGrid() {
               return (
                 <motion.button
                   key={industry}
-                  onClick={() => setSelectedIndustry(industry)}
+                  onClick={() => handleIndustryChange(industry)}
                   className={cn(
                     "px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300",
                     selectedIndustry === industry

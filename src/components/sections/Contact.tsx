@@ -56,7 +56,7 @@ export function Contact() {
                   Ready to Transform?
                 </h2>
                 <p className="text-silver text-lg md:text-xl max-w-2xl mx-auto">
-                  Let's discuss how we can help your business achieve its digital
+                  Let&apos;s discuss how we can help your business achieve its digital
                   transformation goals.
                 </p>
               </motion.div>
